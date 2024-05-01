@@ -37,18 +37,20 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_name").value = /*tg.initDataUnsafe.user.first_name +*/ " ты";
-            });/*
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name;
+            });
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = "";
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
             if(email.length < 5) {
+                alert("Ошибка");
                 document.getElementById("error").innerText = "Недействительная почта";
                 return;
             }
             if(phone.length < 5) {
+                alert("Ошибка");
                 document.getElementById("error").innerText = "Недействительный номер";
                 return;
             }
@@ -59,7 +61,7 @@
             }
             tg.sendData(JSON.stringify(data));
             tg.close();
-        });*/
+        });
         
     </script>
     
