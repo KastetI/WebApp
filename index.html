@@ -45,12 +45,12 @@
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
             if(email.length < 5) {
-                alert("Ошибка");
+                alert("Недействительная почта");
                 document.getElementById("error").innerText = "Недействительная почта";
                 return;
             }
             if(phone.length < 5) {
-                alert("Ошибка");
+                alert("Недействительный номер");
                 document.getElementById("error").innerText = "Недействительный номер";
                 return;
             }
